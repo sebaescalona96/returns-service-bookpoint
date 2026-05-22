@@ -37,7 +37,7 @@ public class DevolucionController {
 
     @GetMapping("/{id}")
     public ResponseEntity<Devolucion> buscarPorId(@PathVariable Long id) {
-        return service.obtenerPorId(id)
+        return service.obtenerPorIde(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
